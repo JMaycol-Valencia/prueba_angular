@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-project-two';
   name = 'maycol';
+  age = 24;
   img = 'https://www.w3schools.com/howto/img_avatar.png'
+
+  btnDisable = true;
+  
+  persona = {
+    name: 'Jhonn',
+    age: 25,
+    avatar: "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000" 
+  }
 }
