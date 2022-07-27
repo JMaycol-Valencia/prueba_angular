@@ -18,4 +18,18 @@ export class AppComponent {
     age: 25,
     avatar: "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000" 
   }
+
+  /*Metodos */
+
+  public toggleButton(){
+    this.btnDisable = !this.btnDisable;
+  }
+
+  public aumentarEdad(){
+    this.persona.age += 1;
+  }
+
+  public restarEdad(){
+    this.persona.age -= 1;
+  }
 }
