@@ -44,4 +44,36 @@ export class AppComponent {
     const element = event.target as HTMLInputElement;
     this.persona.name = element.value;
   }
+
+  /*PRUEBA EXTRA */
+  clickEvent(){
+    alert('Simple click event fired');
+  }
+
+  dblclickEvent(){
+    alert('Double click event fired');   
+  }
+
+  blurEvent(){
+    console.log('Blur event fired');
+   // alert('Blur event fired');   
+  }
+
+  focusEvent(){
+    console.log('Focus event fired');
+    //alert('Focus event fired');   
+  }
+
+  copyEvent(){
+    alert('Copy event fired');   
+  }
+
+  cutEvent(){
+    alert('Cut event fired');   
+
+  }
+
+  pasteEvent(){
+     alert('Paste event fired');   
+  }
 }

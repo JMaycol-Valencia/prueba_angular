@@ -41,3 +41,22 @@
 </div>
 <p>Nombre: {{persona.name}}</p>
 <input type="text" [value]="persona.name" (keyup)="changeName($event)"><br>
+<hr>
+<h1>PRUEBA EXTRA</h1>
+<h1 style="text-align:center" (copy)="copyEvent()" (cut)="cutEvent()">Events Demo</h1><br>
+<div class="alert alert-primary m-b-2" role="alert">
+   <button class="btn btn-primary" (click)="clickEvent()">Click Event</button>
+</div>
+<div class="alert alert-primary m-b-2" role="alert">
+   <button class="btn btn-info" (dblclick)="dblclickEvent()">Double Click</button>
+</div>
+
+<div class="alert alert-primary m-b-2" role="alert">
+
+  <input type="text" (blur)="blurEvent()" (cut)="cutEvent()" (paste)="pasteEvent()" value="Blur event ">
+</div>
+
+<div class="alert alert-secondary m-b-2" role="alert">
+
+  <input type="text" (focus)="focusEvent()" (cut)="cutEvent()" (paste)="pasteEvent()" value="Focus event ">
+</div>
