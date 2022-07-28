@@ -24,3 +24,20 @@
 <button (click)="aumentarEdad()" >Aumentar</button>
 <button (click)="restarEdad()">Restar</button>
 <p>Edad: {{persona.age}}</p>
+<!--ESCUCHANDO EVENTOS CON ANGULAR-->
+<div class="box" (scroll)="onScroll($event)">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Expedita in totam dolor nostrum sit provident quaerat quis,
+    unde reiciendis quia cumque. Dolor minima sit nesciunt neque, 
+    molestias velit nostrum iste?
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Expedita in totam dolor nostrum sit provident quaerat quis,
+    unde reiciendis quia cumque. Dolor minima sit nesciunt neque, 
+    molestias velit nostrum iste?
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Expedita in totam dolor nostrum sit provident quaerat quis,
+    unde reiciendis quia cumque. Dolor minima sit nesciunt neque, 
+    molestias velit nostrum iste?</p>
+</div>
+<p>Nombre: {{persona.name}}</p>
+<input type="text" [value]="persona.name" (keyup)="changeName($event)"><br>

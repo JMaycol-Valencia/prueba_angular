@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'my-project-two';
@@ -31,5 +31,17 @@ export class AppComponent {
 
   public restarEdad(){
     this.persona.age -= 1;
+  }
+
+  /*FUNCIONES QUE USAN EL EVENTO COMO PARAMETRO
+   PARA ACCEDES A SUS PROPIEDADES */
+  public onScroll(event: Event){
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop)
+  }
+
+  changeName(event: Event){
+    const element = event.target as HTMLInputElement;
+    this.persona.name = element.value;
   }
 }
