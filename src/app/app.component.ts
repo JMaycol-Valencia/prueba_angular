@@ -12,11 +12,11 @@ export class AppComponent {
   img = 'https://www.w3schools.com/howto/img_avatar.png'
 
   btnDisable = true;
-  
+
   persona = {
     name: 'Jhonn',
-    age: 25,
-    avatar: "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000" 
+    age: 0,
+    avatar: "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000"
   }
 
   /*Metodos */
@@ -51,29 +51,29 @@ export class AppComponent {
   }
 
   dblclickEvent(){
-    alert('Double click event fired');   
+    alert('Double click event fired');
   }
 
   blurEvent(){
     console.log('Blur event fired');
-   // alert('Blur event fired');   
+   // alert('Blur event fired');
   }
 
   focusEvent(){
     console.log('Focus event fired');
-    //alert('Focus event fired');   
+    //alert('Focus event fired');
   }
 
   copyEvent(){
-    alert('Copy event fired');   
+    alert('Copy event fired');
   }
 
   cutEvent(){
-    alert('Cut event fired');   
+    alert('Cut event fired');
 
   }
 
   pasteEvent(){
-     alert('Paste event fired');   
+     alert('Paste event fired');
   }
 }
