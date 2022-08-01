@@ -1,3 +1,4 @@
+
 <!--USO DE *ngIf para manejar dinamicamente vistas-->
 <h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="persona.name">
@@ -20,6 +21,16 @@
   <input type="number" #ageInput="ngModel" [(ngModel)]="persona.age">
   <p>Valid: {{ ageInput.valid }}</p>
 <hr>
+
+<h1>Estructura de Control *ngIf</h1>
+<p *ngIf="1 == 1">Parrafo Condicionado</p>
+<div>
+<input type="text" required [(ngModel)]="persona.name"/>
+<h2 *ngIf="persona.name ==  'maycol' ">Soy Maycol</h2><br>
+<input type="number" required [(ngModel)]="persona.age"/>
+<h2 *ngIf="persona.age ==  18 ">Soy julian y tengo 18</h2>
+</div>
+
 <h1>Property Biding</h1>
 <h2>Propiedades 1</h2>
 <button [disabled] = "btnDisable">Boton</button>
@@ -82,4 +93,7 @@
 
   <input type="text" (focus)="focusEvent()" (cut)="cutEvent()" (paste)="pasteEvent()" value="Focus event ">
 </div>
+<<<<<<< HEAD
 <hr>
+=======
+>>>>>>> 642f66c85e9aa410eaeea7e0336209b97bb7e078

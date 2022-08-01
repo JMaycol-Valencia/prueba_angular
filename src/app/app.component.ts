@@ -9,13 +9,17 @@ export class AppComponent {
   title = 'my-project-two';
   name = 'maycol';
   age = 24;
-  img = 'https://www.w3schools.com/howto/img_avatar.png'
+  img = 'https://www.w3schools.com/howto/img_avatar.png';
 
   btnDisable = true;
 
   persona = {
     name: 'Jhonn',
+<<<<<<< HEAD
     age: 0,
+=======
+    age: 25,
+>>>>>>> 642f66c85e9aa410eaeea7e0336209b97bb7e078
     avatar: "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000"
   }
 
