@@ -15,13 +15,12 @@ export class AppComponent {
 
   persona = {
     name: 'Jhonn',
-<<<<<<< HEAD
-    age: 0,
-=======
     age: 25,
->>>>>>> 642f66c85e9aa410eaeea7e0336209b97bb7e078
     avatar: "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000"
   }
+
+  names: string[] = ['nicolas', 'maycol', 'vanesa', 'carlos',' alan'];
+  newName = '';
 
   /*Metodos */
 
@@ -79,5 +78,17 @@ export class AppComponent {
 
   pasteEvent(){
      alert('Paste event fired');
+  }
+
+
+  /*MANEJO DE NGFOR , funciones */
+
+  addName(){
+    this.names.push(this.newName);
+    this.newName = '';    /*LINEA DE CODIGO PARA LIMPIAR EL INPUT AL TERMINAR EL GUARDADO DE LA LISTA */
+  }
+
+  deleteName(index : number){
+    this.names.splice(index, 1);
   }
 }

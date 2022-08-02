@@ -11,11 +11,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
     FormsModule,
-=======
-    FormsModule,  
->>>>>>> 642f66c85e9aa410eaeea7e0336209b97bb7e078
     AppRoutingModule
   ],
   providers: [],

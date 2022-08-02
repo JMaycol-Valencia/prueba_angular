@@ -1,11 +1,25 @@
-
+<!--Manejo de ngFor , es forzoso usarlo como propiedad dentro una
+etiqueta HTML de lista -->
+<h1>*ngFor</h1>
+<ul>
+  <button (click)="addName()">Agregar Nombre</button>
+  <input type="text" required [(ngModel)]="newName">
+  <!--USAMOS EL ngFor para dentro la etiqueta que se repetira-->
+  <li *ngIf="names.length == 0">LA LISTA NO TIENE NOMBRES</li>
+  <li *ngFor="let name of names; index as i">
+    <!--RECURRIMOS al manejo de la variable creada para recorere la lista,
+    podemos agregar el con 'index as i'-->
+    {{i}} {{name}}
+    <button (click)="deleteName(i)">Eliminar</button>
+  </li>
+</ul>
 <!--USO DE *ngIf para manejar dinamicamente vistas-->
 <h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="persona.name">
 <p *ngIf="persona.name === 'maycol' && persona.age >= 18 ; else bloqueMaycol" >Bienvenido Maycol</p>
 <p *ngIf="persona.name === 'vanesa'">Bienvenido Vanesa</p>
 <!--BLOQUE ELSE PARA UNA ESTRUCTURA IF SIEMPRE CONECTANDOLO
-  CON LA PROPIEDAD DE ELSE Y SEGUIDO DE LA VARIUABLE TEMPLATE-->
+  CON LA PROPIEDAD DE ELSE Y SEGUIDO DE LA VARIABLE TEMPLATE-->
 <ng-template #bloqueMaycol>
   <p>espera unos años mas maycol</p>
 </ng-template>
