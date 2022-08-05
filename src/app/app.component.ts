@@ -22,6 +22,48 @@ export class AppComponent {
   names: string[] = ['nicolas', 'maycol', 'vanesa', 'carlos',' alan'];
   newName = '';
 
+  habitaciones: number[] = [1,2,3,4,4.1,4.2,4.3,4.4];
+  pagos: boolean[] = [true, false, true, true , true , true , false, false];
+
+  products: Product[] = [
+    {
+      name: 'EL mejor juguete',
+      price: 565,
+      image: './assets/images/toy.webp',
+      category: 'juguetes'
+    },
+    {
+      name: 'Bicicleta casi nueva',
+      price: 356,
+      image: './assets/images/bike.jpeg',
+      category: 'deporte'
+    },
+    {
+      name: 'Colleción de albumnes',
+      price: 34,
+      image: './assets/images/album.jpg',
+      category: 'musica'
+    },
+    {
+      name: 'Mis libros',
+      price: 23,
+      image: './assets/images/books.jpg',
+      category: 'lectura'
+    },
+    {
+      name: 'Casa para perro',
+      price: 34,
+      image: './assets/images/house.webp',
+      category: 'mascotas'
+    },
+    {
+      name: 'Gafas',
+      price: 3434,
+      image: './assets/images/glass.webp',
+      category: 'Dama'
+    }
+  ]
+
   /*Metodos */
 
   public toggleButton(){

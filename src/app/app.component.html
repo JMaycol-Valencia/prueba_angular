@@ -1,3 +1,33 @@
+<!--MANEJO DE NGSWITCH-->
+<h1>[ngSwitch]</h1>
+<h2>Demostraremos las ventajas comparandolas con una condicional *ngIf</h2>
+
+<input type="text" required [(ngModel)]="persona.name">
+<p *ngIf="persona.name === ''">Digite un nombre</p>
+<p *ngIf="persona.name === 'maycol'">El usuario es Maycol</p>
+<p *ngIf="persona.name === 'cristian'">El usuario es Cristian</p>
+<p *ngIf="persona.name === 'vanesa'">El usuario es Vanesa</p>
+
+<h2>Comparado con el *ngSwitch</h2>
+<div [ngSwitch]="persona.name">
+  <p *ngSwitchCase="'maycol'">El usuario es Maycol</p>
+  <p *ngSwitchCase="'cristian'">El usuario es Cristian</p>
+  <p *ngSwitchCase="'vanesa'">El usuario es Vanesa</p>
+  <p *ngSwitchDefault="">Digite un usuario correcto</p>
+</div>
+
+<!--MANEJANDO ngFor para ARRAYS de productos-->
+<h1>*ngFor con Arrays</h1>
+<div>
+  <div *ngFor="let product of products">
+    <img width="250px" [src]="product.image" alt="image">
+    <h2>{{product.price}}</h2>
+    <p>{{product.name}} - {{product.category}}</p>
+  </div>
+</div>
+
+
+
 <!--Manejo de ngFor , es forzoso usarlo como propiedad dentro una
 etiqueta HTML de lista -->
 <h1>*ngFor</h1>
@@ -13,6 +43,15 @@ etiqueta HTML de lista -->
     <button (click)="deleteName(i)">Eliminar</button>
   </li>
 </ul>
+
+<!--BUSCAR SOLUCION PARA DOS ngFor seguidos-->
+<ul>
+  <div *ngFor=" let habitacion of habitaciones; let pago of pagos">
+    <li>{{habitacion}} {{pago}}</li>
+  </div>
+</ul>
+<!--CON PREFERENCIA-->
+
 <!--USO DE *ngIf para manejar dinamicamente vistas-->
 <h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="persona.name">
