@@ -1,3 +1,42 @@
+<!--CREACION DE FORMULARIO DINAMICO-->
+<h1>FORMULARIO</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input.group">
+    <label for="">Nombre</label>
+    <input type="text" id="name" name="name" required [(ngModel)]="register.name">
+    <p>MENSAJE ERROR NAME</p>
+  </div>
+
+  <div class="input.group">
+    <label for="">Email</label>
+    <input type="email" id="email" name="email" required [(ngModel)]="register.email">
+    <p>MENSAJE ERROR EMAIL</p>
+  </div>
+
+  <div class="input.group">
+    <label for="">Password</label>
+    <input type="password" id="password" name="password" required [(ngModel)]="register.password">
+    <p>MENSAJE ERROR PASSWORD</p>
+  </div>
+  <button [disabled]="myForm.invalid" type="submit">Registrar</button>
+  <button type="button">Accion</button>
+</form>
+<hr>
+<!--MANEJO DE CLASES Y ESTILOS-->
+<h1>CLAS AND STYLE</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="persona.name">
+<p class="message-error" [class.active]="nameInput2.invalid">El campo es requerido</p>
+<label >Edad</label><br>
+<input type="number" required #nameInput3="ngModel" [(ngModel)]="persona.age" >
+<p [style.font-style]="nameInput3.invalid ? 'italic': 'normal'" >Texto Texto Texto</p>
+<div>
+  <div>
+    <input type="number" [(ngModel)]="widthImg" >
+  </div>
+  <div>
+    <img [style.width.px]="widthImg" [src]="persona.avatar">
+  </div>
+</div>
 <!--MANEJO DE NGSWITCH-->
 <h1>[ngSwitch]</h1>
 <h2>Demostraremos las ventajas comparandolas con una condicional *ngIf</h2>
@@ -18,9 +57,9 @@
 
 <!--MANEJANDO ngFor para ARRAYS de productos-->
 <h1>*ngFor con Arrays</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img width="250px" [src]="product.image" alt="image">
+    <img [src]="product.image" alt="image">
     <h2>{{product.price}}</h2>
     <p>{{product.name}} - {{product.category}}</p>
   </div>
@@ -103,7 +142,7 @@ etiqueta HTML de lista -->
 <h2>{{ 'Hola Mundo'.repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola soy, {{name}}</h3>
-<img src={{img}} alt="imagen">
+<img src={{img}} width="200px" alt="imagen">
 <h1>Eventos</h1>
 <button [disabled]="btnDisable" >Enviar</button>
 <button (click)="toggleButton()" >Toggle Button</button>
@@ -146,7 +185,4 @@ etiqueta HTML de lista -->
 
   <input type="text" (focus)="focusEvent()" (cut)="cutEvent()" (paste)="pasteEvent()" value="Focus event ">
 </div>
-<<<<<<< HEAD
 <hr>
-=======
->>>>>>> 642f66c85e9aa410eaeea7e0336209b97bb7e078

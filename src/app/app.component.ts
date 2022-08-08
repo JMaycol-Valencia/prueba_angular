@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  widthImg = 100;
   title = 'my-project-two';
   name = 'maycol';
   age = 24;
@@ -17,6 +20,12 @@ export class AppComponent {
     name: 'Jhonn',
     age: 25,
     avatar: "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000"
+  }
+
+  register= {
+    name : '',
+    email: '',
+    password: ''
   }
 
   names: string[] = ['nicolas', 'maycol', 'vanesa', 'carlos',' alan'];
@@ -133,4 +142,9 @@ export class AppComponent {
   deleteName(index : number){
     this.names.splice(index, 1);
   }
+
+  onRegister(){
+    console.log(this.register);
+  }
+
 }
